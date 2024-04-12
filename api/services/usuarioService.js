@@ -1,10 +1,10 @@
-const db = require('../models')
+const database = require('../models')
 const { hash } = require('bcryptjs')
 const uuid = require('uuid')
 
 class UsuarioService {
     async cadastrar(dto) {
-        const usuario = await db.usuarios.findOne({
+        const usuario = await database.usuarios.findOne({
             where: {
                 email: dto.email
             }
@@ -27,6 +27,7 @@ class UsuarioService {
             return novoUsuario
         } catch (error) {
             throw new Error('Erro ao cadastrar usuario')
-        }}}
-
+        }
+    }
+}
 module.exports = UsuarioService
