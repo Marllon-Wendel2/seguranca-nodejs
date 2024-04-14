@@ -1,8 +1,11 @@
 const { Router } = require ('express');
 const UsuarioController = require('../controllers/usuarioController');
+const autenticadoJs = require('../middleware/autenticado.Js');
+//const autenticado = require('../middleware/autenticado')
 
 
 const router = Router();
+router.use(autenticadoJs)
 
 router
     .post('/usuarios', UsuarioController.cadastrar)
