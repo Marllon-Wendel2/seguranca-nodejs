@@ -1,4 +1,3 @@
-const { where } = require('sequelize');
 const database = require('../models');
 const uuid = require('uuid')
 
