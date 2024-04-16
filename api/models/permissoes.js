@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       permissoes.belongsToMany(models.usuarios, {
         through: models.usuarios_permissoes,
         as: 'permissoes_do_usuario',
-        foreignKey: 'permissoes_id'
+        foreignKey: 'permissao_id'
       })
 
       permissoes.belongsToMany(models.roles, {

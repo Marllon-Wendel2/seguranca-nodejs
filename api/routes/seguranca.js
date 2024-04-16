@@ -4,7 +4,7 @@ const SegurancaController = require('../controllers/segurancaController')
 const router = Router();
 
 router
-    .post('/seguranca', SegurancaController.cadastrarAcl)
+    .post('/seguranca/acl', SegurancaController.cadastrarAcl)
 
 
 module.exports = router
